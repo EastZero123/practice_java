@@ -19,10 +19,12 @@
         span {
             color: blue;
         }
+        
     </style>
 </head>
 
 <body>
+    
     <h1><a href="index.html">WEB</a></h1>
 
     <!-- <input type="button" value="night" onclick="document.querySelector('body').style.backgroundColor='black';
@@ -30,15 +32,16 @@
     <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white';
     document.querySelector('body').style.color='black';"> -->
 
-    <input id="night_day" type="button" value="night" onclick="
-    if (document.querySelector('#night_day').value==='night') {
-    document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white';
-    document.querySelector('#night_day').value='day';
+    <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if (this.value==='night') {
+    target.style.backgroundColor='black';
+    target.style.color='white';
+    this.value='day';
     }else { 
-    document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black';
-    document.querySelector('#night_day').value='night'}">
+    target.style.backgroundColor='white';
+    target.style.color='black';
+    this.value='night'}">
 
     <ol>
         <li><a href="1.html">HTML</a></li>
@@ -54,6 +57,17 @@
         use <span class="js">JavaScript</span> on the
         client side for web page behavior,[12] often incorporating third-party libraries.[13] All major web browsers
         have a dedicated <span class="js">JavaScript</span> engine to execute the code on users' devices.</p>
+
+    <input this type="button" value="night" onclick="
+    if (this.value==='night') {
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    this.value='day';
+    }else { 
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    this.value='night'}">
+
 </body>
 
 </html>
