@@ -19,12 +19,11 @@
         span {
             color: blue;
         }
-        
     </style>
 </head>
 
 <body>
-    
+
     <h1><a href="index.html">WEB</a></h1>
 
     <!-- <input type="button" value="night" onclick="document.querySelector('body').style.backgroundColor='black';
@@ -38,10 +37,24 @@
     target.style.backgroundColor='black';
     target.style.color='white';
     this.value='day';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while( i < alist.length) {
+        alist[i].style.color = 'powderblue';
+        i = i + 1;
+    }
     }else { 
     target.style.backgroundColor='white';
     target.style.color='black';
-    this.value='night'}">
+    this.value='night';
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while( i < alist.length) {
+        alist[i].style.color = 'blue';
+        i = i + 1;
+    }
+    }">
 
     <ol>
         <li><a href="1.html">HTML</a></li>
